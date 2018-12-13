@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {AsyncStorage,AppState, StyleSheet, Text, View} from 'react-native';
 import { Provider } from "react-redux";
 import { CreateStoreWithInitialState } from "./store";
+import { AppWithNavigationState } from "./navigators";
 
 
 export default class App extends Component{
@@ -72,9 +73,9 @@ export default class App extends Component{
         <Text>Loading...</Text>
       </View>
     ) : (
-      <View style={styles.container}>
-       <Text>Loaded</Text>
-      </View>
+      <Provider store={this.state.store}>
+           <AppWithNavigationState />
+      </Provider>
     );
   }
 }
