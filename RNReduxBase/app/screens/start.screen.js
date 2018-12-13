@@ -6,7 +6,7 @@ import {
 import {connect} from 'react-redux';
 import { bindActionCreators } from "redux";
 
-class AuthLoading extends React.Component {
+class Start extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -33,7 +33,7 @@ const mapDispatchToProps = dispatch => {
 };
 
 
-export const StartScreen = connect(mapStateToProps, mapDispatchToProps)(AuthLoading);
+export const StartScreen = connect(mapStateToProps, mapDispatchToProps)(Start);
 
 const styles = StyleSheet.create({
   container: {

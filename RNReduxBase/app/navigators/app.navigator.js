@@ -47,11 +47,11 @@ class AppWithNavigation extends React.Component {
     const { dispatch, nav } = this.props;
     return (
       <AppNavigator
-        navigation={{
-          dispatch,
-          state: nav,
-          addListener
-        }}
+        // navigation={{
+        //   dispatch,
+        //   state: nav,
+        //   addListener
+        // }}
       />
     );
   }
