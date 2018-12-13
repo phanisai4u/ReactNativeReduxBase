@@ -5,10 +5,9 @@ import reducers from './reducers';
 
 export const CreateStoreWithInitialState = (initialState = {}) => {
   return createStore(
-  initialState,
   reducers,
   applyMiddleware(
-    thunk,
+    thunk
   )
   );
 };
