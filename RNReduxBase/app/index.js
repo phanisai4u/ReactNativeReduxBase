@@ -67,11 +67,15 @@ export default class App extends Component{
   }
 
   render() {
-    return  (
+    return  this.state.isStoreLoading ? (
       <View style={styles.container}>
         <Text>Loading...</Text>
       </View>
-    ) 
+    ) : (
+      <View style={styles.container}>
+       <Text>Loaded</Text>
+      </View>
+    );
   }
 }
 
