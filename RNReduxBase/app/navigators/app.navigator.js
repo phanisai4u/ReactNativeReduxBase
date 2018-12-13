@@ -8,15 +8,17 @@ import { BackHandler, Dimensions } from "react-native";
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { addListener } from "../utils/redux";
+
+import { StartScreen } from '../screens';
+
 
 export const AppNavigator = createSwitchNavigator(
   {
-    AuthLoading: AuthLoadingScreen,
-    App: DrawerStack,
-    Auth: AuthStack
+    Start: StartScreen,
   },
   {
-    initialRouteName: "AuthLoading"
+    initialRouteName: "Start"
   }
 );
 
